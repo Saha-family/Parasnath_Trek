@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="image.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="vid">
+        <div class="heading">Parasnath Trek <span>Jharkhand</span> (06/09/2025)</div>
+      <iframe width="400" height="300" src="https://www.youtube.com/embed/vD3WtuCH43g?si=wYhQcLAf2jBTdUbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="400" height="300" src="https://www.youtube.com/embed/XcjWVVohzBE?si=cC1ZskfSRiZwA_ym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+
+      </div>
+      
+      
+    
+      <div class="img-box">
+        
+        <div class="coloumn1" id="col1"></div>
+        <div class="coloumn1" id="col2"></div>
+        <div class="coloumn1" id="col3"></div>
+      </div>
+    </div>
+
+    <script>
+      const total = 127;
+  const col1 = document.getElementById("col1");
+  const col2 = document.getElementById("col2");
+  const col3 = document.getElementById("col3");
+
+  for (let i = 1; i <= total; i++) {
+    const a = document.createElement("a");
+    a.href = `pic   (${i}).jpg`;
+    const img = document.createElement("img");
+    img.src = `pic   (${i}).jpg`;
+    a.appendChild(img);
+
+    // distribute equally
+    if (i % 3 === 1) col1.appendChild(a);
+    else if (i % 3 === 2) col2.appendChild(a);
+    else col3.appendChild(a);
+  }
+    </script>
+  </body>
+</html>
